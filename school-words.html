@@ -178,44 +178,44 @@
 <script>
 const VOCAB = [
   // School & people
-  {hz:"学校",py:"xuéxiào",en:"school",cat:"sub"},
-  {hz:"老师",py:"lǎoshī",en:"teacher",cat:"sub"},
-  {hz:"同学",py:"tóngxué",en:"classmate",cat:"sub"},
-  {hz:"学生",py:"xuésheng",en:"student",cat:"sub"},
-  {hz:"课",py:"kè",en:"class / lesson",cat:"sub"},
-  {hz:"课程表",py:"kèchéngbiǎo",en:"timetable",cat:"sub"},
+  {hz:"学校",py:"xuéxiào",en:"school",cat:"sub",a:"xuexiao"},
+  {hz:"老师",py:"lǎoshī",en:"teacher",cat:"sub",a:"laoshi"},
+  {hz:"同学",py:"tóngxué",en:"classmate",cat:"sub",a:"tongxue"},
+  {hz:"学生",py:"xuésheng",en:"student",cat:"sub",a:"xuesheng"},
+  {hz:"课",py:"kè",en:"class / lesson",cat:"sub",a:"ke"},
+  {hz:"课程表",py:"kèchéngbiǎo",en:"timetable",cat:"sub",a:"kechengbiao"},
   // Subjects
-  {hz:"中文",py:"Zhōngwén",en:"Chinese",cat:"subj"},
-  {hz:"英文",py:"Yīngwén",en:"English",cat:"subj"},
-  {hz:"数学",py:"shùxué",en:"Maths",cat:"subj"},
-  {hz:"科学",py:"kēxué",en:"Science",cat:"subj"},
-  {hz:"体育",py:"tǐyù",en:"PE / Sport",cat:"subj"},
-  {hz:"音乐",py:"yīnyuè",en:"Music",cat:"subj"},
-  {hz:"美术",py:"měishù",en:"Art",cat:"subj"},
-  {hz:"历史",py:"lìshǐ",en:"History",cat:"subj"},
-  {hz:"地理",py:"dìlǐ",en:"Geography",cat:"subj"},
-  {hz:"电脑",py:"diànnǎo",en:"Computing",cat:"subj"},
+  {hz:"中文",py:"Zhōngwén",en:"Chinese",cat:"subj",a:"zhongwen"},
+  {hz:"英文",py:"Yīngwén",en:"English",cat:"subj",a:"yingwen"},
+  {hz:"数学",py:"shùxué",en:"Maths",cat:"subj",a:"shuxue"},
+  {hz:"科学",py:"kēxué",en:"Science",cat:"subj",a:"kexue"},
+  {hz:"体育",py:"tǐyù",en:"PE / Sport",cat:"subj",a:"tiyu"},
+  {hz:"音乐",py:"yīnyuè",en:"Music",cat:"subj",a:"yinyue"},
+  {hz:"美术",py:"měishù",en:"Art",cat:"subj",a:"meishu"},
+  {hz:"历史",py:"lìshǐ",en:"History",cat:"subj",a:"lishi"},
+  {hz:"地理",py:"dìlǐ",en:"Geography",cat:"subj",a:"dili"},
+  {hz:"电脑",py:"diànnǎo",en:"Computing",cat:"subj",a:"diannao"},
   // Days
-  {hz:"星期一",py:"xīngqīyī",en:"Monday",cat:"day"},
-  {hz:"星期二",py:"xīngqī'èr",en:"Tuesday",cat:"day"},
-  {hz:"星期三",py:"xīngqīsān",en:"Wednesday",cat:"day"},
-  {hz:"星期四",py:"xīngqīsì",en:"Thursday",cat:"day"},
-  {hz:"星期五",py:"xīngqīwǔ",en:"Friday",cat:"day"},
-  {hz:"星期六",py:"xīngqīliù",en:"Saturday",cat:"day"},
-  {hz:"星期日",py:"xīngqīrì",en:"Sunday",cat:"day"},
-  {hz:"今天",py:"jīntiān",en:"today",cat:"day"},
+  {hz:"星期一",py:"xīngqīyī",en:"Monday",cat:"day",a:"xingqi1"},
+  {hz:"星期二",py:"xīngqī'èr",en:"Tuesday",cat:"day",a:"xingqi2"},
+  {hz:"星期三",py:"xīngqīsān",en:"Wednesday",cat:"day",a:"xingqi3"},
+  {hz:"星期四",py:"xīngqīsì",en:"Thursday",cat:"day",a:"xingqi4"},
+  {hz:"星期五",py:"xīngqīwǔ",en:"Friday",cat:"day",a:"xingqi5"},
+  {hz:"星期六",py:"xīngqīliù",en:"Saturday",cat:"day",a:"xingqi6"},
+  {hz:"星期日",py:"xīngqīrì",en:"Sunday",cat:"day",a:"xingqi7"},
+  {hz:"今天",py:"jīntiān",en:"today",cat:"day",a:"jintian"},
   // Useful words
-  {hz:"有",py:"yǒu",en:"to have",cat:"use"},
-  {hz:"和",py:"hé",en:"and",cat:"use"},
-  {hz:"很",py:"hěn",en:"very",cat:"use"},
-  {hz:"喜欢",py:"xǐhuan",en:"to like",cat:"use"},
-  {hz:"不喜欢",py:"bù xǐhuan",en:"to not like",cat:"use"},
+  {hz:"有",py:"yǒu",en:"to have",cat:"use",a:"you"},
+  {hz:"和",py:"hé",en:"and",cat:"use",a:"he"},
+  {hz:"很",py:"hěn",en:"very",cat:"use",a:"hen"},
+  {hz:"喜欢",py:"xǐhuan",en:"to like",cat:"use",a:"xihuan"},
+  {hz:"不喜欢",py:"bù xǐhuan",en:"to not like",cat:"use",a:"buxihuan"},
 ];
 const PATTERNS = [
-  {hz:"我喜欢中文。",py:"Wǒ xǐhuan Zhōngwén.",en:"I like Chinese."},
-  {hz:"我不喜欢数学。",py:"Wǒ bù xǐhuan shùxué.",en:"I don't like Maths."},
-  {hz:"星期一我有体育。",py:"Xīngqīyī wǒ yǒu tǐyù.",en:"On Monday I have PE."},
-  {hz:"我的中文老师很好。",py:"Wǒ de Zhōngwén lǎoshī hěn hǎo.",en:"My Chinese teacher is very good."},
+  {hz:"我喜欢中文。",py:"Wǒ xǐhuan Zhōngwén.",en:"I like Chinese.",a:"pat1"},
+  {hz:"我不喜欢数学。",py:"Wǒ bù xǐhuan shùxué.",en:"I don't like Maths.",a:"pat2"},
+  {hz:"星期一我有体育。",py:"Xīngqīyī wǒ yǒu tǐyù.",en:"On Monday I have PE.",a:"pat3"},
+  {hz:"我的中文老师很好。",py:"Wǒ de Zhōngwén lǎoshī hěn hǎo.",en:"My Chinese teacher is very good.",a:"pat4"},
 ];
 const CATS = [
   {key:"sub", cls:"cat-sub", name:"School & People"},
@@ -224,12 +224,23 @@ const CATS = [
   {key:"use", cls:"cat-use", name:"Useful Words"},
 ];
 
-/* ---- audio ---- */
+/* ---- audio: pre-recorded DashScope CosyVoice MP3s, browser TTS as fallback ---- */
 let voices=[];
 function loadVoices(){voices=window.speechSynthesis?speechSynthesis.getVoices():[];}
 if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}
-function speak(text){
-  if(!('speechSynthesis' in window))return;
+let curAudio=null;
+function play(item){
+  if(item&&item.a){
+    try{if(curAudio){curAudio.pause();}}catch(e){}
+    const a=new Audio('audio/'+item.a+'.mp3');
+    curAudio=a;
+    a.play().catch(()=>speakTTS(item.hz));
+    return;
+  }
+  speakTTS(item?item.hz:'');
+}
+function speakTTS(text){
+  if(!('speechSynthesis' in window)||!text)return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
   u.lang='zh-CN';u.rate=.82;
@@ -244,7 +255,7 @@ function wordCard(w){
   d.className='word zh';
   d.innerHTML=`<button class="spk" title="Hear it" aria-label="Hear it">🔊</button>
     <div class="hz">${w.hz}</div><div class="py">${w.py}</div><div class="en">${w.en}</div>`;
-  d.addEventListener('click',()=>speak(w.hz));
+  d.addEventListener('click',()=>play(w));
   return d;
 }
 function renderLearn(){
@@ -322,7 +333,7 @@ document.getElementById('fc-card').addEventListener('click',()=>document.getElem
 document.getElementById('fc-flip').addEventListener('click',()=>document.getElementById('fc-card').classList.toggle('flipped'));
 document.getElementById('fc-next').addEventListener('click',()=>{fcIdx=(fcIdx+1)%fcDeck.length;showFc();});
 document.getElementById('fc-shuffle').addEventListener('click',renderFlash);
-document.getElementById('fc-speak').addEventListener('click',()=>speak(fcDeck[fcIdx].hz));
+document.getElementById('fc-speak').addEventListener('click',()=>play(fcDeck[fcIdx]));
 document.getElementById('fc-cat').addEventListener('change',renderFlash);
 document.getElementById('fc-side').addEventListener('change',showFc);
 
@@ -348,7 +359,7 @@ function showQ(){
     <div class="q-term zh">${w.hz}</div>
     <div class="q-termpy">${w.py}</div>
     <div class="q-opts">${opts.map(o=>`<button class="opt" data-en="${o.en}">${o.en}</button>`).join('')}</div>`;
-  speak(w.hz);
+  play(w);
   body.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
     body.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.dataset.en===w.en)x.classList.add('correct');});
     if(b.dataset.en===w.en){qScore++;}else{b.classList.add('wrong');}
